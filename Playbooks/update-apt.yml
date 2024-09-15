@@ -1,8 +1,15 @@
 ---
 - name: Update Server
-  hosts: lxc
+  hosts: all
   become: true
   tasks:
     - name: Update apt packages
-      ansible.builtin.apt:
-        update_cache: true
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400 #One day
+      
+      
+      
+      #ansible.builtin.apt:
+      #  update_cache: true
