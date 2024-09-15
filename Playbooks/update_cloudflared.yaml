@@ -1,6 +1,6 @@
 ---
 - name: Update Cloudflare
-  hosts: all
+  hosts: cloudflare
   become: true
   tasks: 
     - name: Mettre a jour le tunnel Cloudflared
