@@ -1,6 +1,6 @@
 ---
 - name: Update Cloudflare
-  hosts: lxc
+  hosts: dell
   tasks: 
     - name: Mettre a jour le tunnel Cloudflared
       ansible.builtin.shell: |
