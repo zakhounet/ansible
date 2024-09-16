@@ -3,6 +3,10 @@
   hosts: cloudflare
   become: true
   tasks:
+    - name: Effacer cloudflared.deb
+      ansible.builtin.shell: |
+        sudo rm cloudflared.deb
+      changed_when: false
     - name: Get cloudflared-linux-amd64.deb
       ansible.builtin.uri:
         url: 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb'
