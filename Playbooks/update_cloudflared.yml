@@ -20,6 +20,6 @@
     - name: Mettre a jour le tunnel Cloudflared
       ansible.builtin.shell: |
         sudo dpkg -i cloudflared.deb &&
-        sudo systemctl restart cloudflared &&
-        sudo rm cloudflared.deb
-      changed_when: false
+        sudo systemctl restart cloudflared
+      #  && sudo rm cloudflared.deb
+      changed_when: result = true
