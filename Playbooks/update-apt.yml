@@ -1,6 +1,6 @@
 ---
 - name: Update Server
-  hosts: all
+  hosts: pve
   become: true
   tasks:
     - name: Update apt packages
