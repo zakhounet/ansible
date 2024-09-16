@@ -2,7 +2,7 @@
 - name: Update Cloudflare
   hosts: cloudflare
   become: true
-  tasks: 
+  tasks:
     - name: Mettre a jour le tunnel Cloudflared
       ansible.builtin.shell: |
         curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &&
