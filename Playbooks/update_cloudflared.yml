@@ -14,4 +14,4 @@
       ansible.builtin.shell: |
         sudo dpkg -i cloudflared.deb &&
         sudo systemctl restart cloudflared
-      changed_when: false
+      #changed_when: false
