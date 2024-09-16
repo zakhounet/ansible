@@ -9,6 +9,9 @@
         method: GET
         dest: cloudflared.deb
         follow_redirects: safe
+        status_code:
+          - 200
+          - 304
       register: result
     - name: Mettre a jour le tunnel Cloudflared
       ansible.builtin.shell: |
