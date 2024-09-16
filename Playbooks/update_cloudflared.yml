@@ -22,4 +22,4 @@
         sudo dpkg -i cloudflared.deb &&
         sudo systemctl restart cloudflared
       #  && sudo rm cloudflared.deb
-      changed_when: result = true
+      when: result == true
