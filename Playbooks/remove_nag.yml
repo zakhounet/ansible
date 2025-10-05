@@ -3,6 +3,7 @@
 - name: Remove "No valid subscription" popup on login to webgui
   hosts: pve
   become: yes
+  become_method: su
   tasks:
   - replace:
       path: /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
