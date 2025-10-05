@@ -11,7 +11,7 @@
       ansible.builtin.uri:
         url: 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb'
         method: GET
-        dest: cloudflared.deb
+        dest: ./cloudflared.deb
         follow_redirects: safe
       register: result
     - name: Mettre a jour le tunnel Cloudflared
